@@ -24,3 +24,15 @@ export function formaterVarighet(minutter) {
     if (ledig <= 3) return "nesten-full";
     return "ledig";
   }
+  // ISO-dato → norsk dato- og klokkeslett-tekst
+export function formaterDatoTid(isoStreng) {
+  const dato = new Date(isoStreng);
+  return dato.toLocaleString("nb-NO", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
