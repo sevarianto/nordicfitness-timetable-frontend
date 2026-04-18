@@ -1,6 +1,5 @@
 // src/components/layout/Header.jsx
-// Navigasjonsheader
-// Sprint 1: kun lenke til timeplan. Flere lenker legges til i Sprint 2.
+// Sprint 2: Mine bookinger lagt til i navigasjonen
 
 import { NavLink } from "react-router-dom";
 
@@ -23,7 +22,11 @@ function Header() {
                 Timeplan
               </NavLink>
             </li>
-            {/* Sprint 2: legg til "Mine bookinger" her */}
+            <li>
+              <NavLink to="/mine-bookinger" className={lenkeklasse}>
+                Mine bookinger
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
